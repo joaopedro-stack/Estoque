@@ -1,0 +1,146 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/produtos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Usuários</title>
+</head>
+
+<body>
+    <nav class="menu">
+        <div class="icons-topo">
+            <a href="dashboard.html">
+                <i class="fa-solid fa-bars">
+                </i></a>
+            <a href="#">
+                <i class="fa-solid fa-users">
+                    <span>Usuários</span>
+                </i>
+            </a>
+            <a href="produtos.html">
+                <i class="fa-solid fa-cart-shopping">
+                    <span>Produtos</span>
+                </i>
+            </a>
+            <a href="movimentacoes.html">
+                <i class="fa-solid fa-right-left">
+                    <span>Movimentações</span>
+                </i>
+            </a>
+        </div>
+        <div class="icons-bot">
+            <i class="fa-solid fa-arrow-right-from-bracket">
+                <span>Sair</span>
+            </i>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="header-content">
+            <h1>Usuários</h1>
+            <button class="new-user"><i class="fa-solid fa-plus"></i>Novo Usuário</button>
+        </div>
+        <div class="modal">
+            <div class="modal-title">
+                <h2>Cadastre um novo usuário</h2>
+                <h3>Coloque todas as informações</h3>
+            </div>
+            <form class="add-form" method="post">
+                <div class="input-group">
+                    <label>Nome:</label>
+                    <input required placeholder="Nome" name="nome" type="text">
+                </div>
+                <div class="input-group">
+                    <label>Usuário:</label>
+                    <input required placeholder="Usuario" name="usuario" type="text">
+                </div>
+                <div class="input-group">
+                    <label>Tipo:</label>
+                    <select id="" name="role" required>
+                        <option value="admin">Admin</option>
+                        <option value="operador">Operador</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Email:</label>
+                    <input type="email" name="email" required placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <label>Senha:</label>
+                    <input type="password" name="senha" required placeholder="Senha">
+                </div>
+                <div class="btns-content">
+                    <button class="cancel">Cancelar</button>
+                    <input type="submit" value="Salvar">
+                </div>
+            </form>
+        </div>
+        <div class="modal-edit">
+            <div class="modal-title">
+                <h2>Editar Usuário</h2>
+                <h3>Coloque todas as informações</h3>
+            </div>
+            <form class="edit-form" method="post">
+                <div class="input-group">
+                    <label>Id:</label>
+                    <input required name="id" type="text" disabled>
+                </div>
+                <div class="input-group">
+                    <label>Nome:</label>
+                    <input required placeholder="Nome" name="nome" type="text">
+                </div>
+                <div class="input-group">
+                    <label>Usuário:</label>
+                    <input required placeholder="Usuario" name="usuario" type="text">
+                </div>
+                <div class="input-group">
+                    <label>Tipo:</label>
+                    <select id="" name="role" required>
+                        <option value="admin">Admin</option>
+                        <option value="operador">Operador</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Email:</label>
+                    <input type="email" name="email" required placeholder="Email">
+                </div>
+                <div class="btns-content">
+                    <button class="cancel">Cancelar</button>
+                    <input type="submit" value="Salvar">
+                </div>
+            </form>
+        </div>
+        <div class="popup">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2 class="msg">Usuário Cadastrado com sucesso</h2>
+        </div>
+        <div class="popup-erro">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <h2 class="msg-erro"></h2>
+        </div>
+        <div class="tabela">
+            <table border="2">
+                <thead>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Usuário</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th class="acoes">Ações</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+
+    <script src="../JS/usuarios.js"></script>
+</body>
+
+</html>

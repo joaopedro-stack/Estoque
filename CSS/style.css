@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --rich-black: #071013ff;
+    --pacific-cyan: #23b5d3ff;
+    --moonstone: #75abbcff;
+    --cadet-gray: #a2aebbff;
+    --platinum: #dfe0e2ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    min-height: 100lvh;
+    background: linear-gradient(150deg, var(--rich-black) 0%, var(--pacific-cyan) 100%);
+}
+
+.container {
+    background-color: var(--platinum);
+    width: 50%;
+    min-height: 500px;
+    display: flex;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.forms {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login,
+.register {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.shape {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(150deg, var(--rich-black) 30%, var(--cadet-gray) 100%);
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.left {
+    left: 0;
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+}
+
+.right {
+    right: 0;
+    clip-path: polygon(100% 100%, 0 0, 100% 0);
+    transform: translateX(100%);
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid var(--pacific-cyan);
+    background-color: transparent;
+    padding: 2px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group .input:focus~label,
+.input-group .input:valid~label {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: var(--moonstone);
+}
+
+label {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    color: #888;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 3px solid var(--pacific-cyan);
+}
+
+.btn {
+    border: none;
+    padding: 8px 12px;
+    background-color: var(--moonstone);
+    color: #f2f2f2;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.btn:hover {
+    background-color: var(--pacific-cyan);
+}
+
+.cadastro,
+.voltar-login {
+    color: var(--moonstone);
+    cursor: pointer;
+    transition: .2s ease;
+    font-weight: 600;
+}
+
+.cadastro:hover,
+.voltar-login:hover {
+    color: var(--pacific-cyan);
+}
+
+h5 {
+    color: var(--rich-black);
+    font-weight: 300;
+}
+
+h1 {
+    color: var(--platinum);
+}
+
+.sair {
+    animation: sair .5s ease forwards;
+}
+
+.entrar {
+    animation: entrar .5s ease forwards;
+    display: flex;
+}
+
+.piscando {
+    animation: piscando 3s ease forwards;
+}
+
+@keyframes sair {
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes entrar {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
+@keyframes entrarright {}
+
+
+@keyframes piscando {
+    0% {
+        opacity: 0.5;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.5;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

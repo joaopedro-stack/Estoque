@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --rich-black: #071013ff;
+    --pacific-cyan: #23b5d3ff;
+    --moonstone: #75abbcff;
+    --cadet-gray: #a2aebbff;
+    --platinum: #dfe0e2ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100lvh;
+    background-color: var(--platinum);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 15px;
+    width: 65px;
+    height: 100lvh;
+    border-right: 3px solid var(--rich-black);
+    background-color: var(--moonstone);
+    overflow: hidden;
+    transition: .8s ease;
+}
+
+.menu:hover{
+    width: 220px;
+}
+
+.icons-topo {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-around;
+}
+
+.icons-bot{
+    height: 50%;
+    display: flex;
+    align-items: end;
+}
+
+.icons-topo i ,
+.icons-bot i {
+    font-size: 1.4rem;
+    color: #efefef;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+a{
+    text-decoration: none;
+}
+
+span {
+    font-size: 1rem;
+}
+
+
+.icons-topo i:hover , 
+.icons-bot i:hover{
+    background-color: var(--pacific-cyan);
+}
+
+.icons-topo .fa-bars:hover{
+    background-color: transparent;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content h1 {
+    font-size: 2em;
+}
+
+.username{
+    font-size: 1em;
+    color: var(--moonstone);
+    font-weight: 800;
+    text-shadow: 1px 1px 1px var(--rich-black);
+}

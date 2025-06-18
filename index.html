@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <h1>Estoque</h1>
+    <!-- Formulários básicos -->
+    <div class="container">
+        <div class="forms">
+            <div class="shape left"></div>
+            <div class="shape right"></div>
+            <form class="register" action="Back/cadastro.php" method="post">
+                <div class="input-group">
+                    <input class="input" name="nome" required type="text">
+                    <label class="label">Nome</label>
+                </div>
+                <div class="input-group">
+                    <input class="input" name="user" required type="text">
+                    <label class="label">Usuário</label>
+                </div>
+                <div class="input-group">
+                    <input class="input" name="email" required type="email">
+                    <label class="label">Email</label>
+                </div>
+                <div class="input-group">
+                    <input class="input" name="senha" required type="password">
+                    <label class="label">Senha</label>
+                </div>
+                <h5>Voltar ao <span class="voltar-login">Login</span></h5>
+                <input class="btn" type="submit" value="Cadastrar">
+            </form>
+            <form class="login" action="Back/login.php" method="post">
+                <div class="input-group">
+                    <input class="input" name="user" required type="text">
+                    <label class="label">Usuário</label>
+                </div>
+                <div class="input-group">
+                    <input class="input" name="senha" required type="password">
+                    <label class="label">Senha</label>
+                </div>
+                <h5>Não tem conta? <span class="cadastro">Cadastre-se</span></h5>
+                <input class="btn" type="submit" value="Acessar">
+            </form>
+        </div>
+    </div>
+</body>
+<script src="JS/script.js"></script>
+
+</html>

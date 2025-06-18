@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/produtos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Produtos</title>
+</head>
+
+<body>
+    <nav class="menu">
+        <div class="icons-topo">
+            <a href="dashboard.html">
+                <i class="fa-solid fa-bars">
+                </i></a>
+            <a href="usuarios.html">
+                <i class="fa-solid fa-users">
+                    <span>Usuários</span>
+                </i>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-cart-shopping">
+                    <span>Produtos</span>
+                </i>
+            </a>
+            <a href="movimentacoes.html">
+                <i class="fa-solid fa-right-left">
+                    <span>Movimentações</span>
+                </i>
+            </a>
+        </div>
+        <div class="icons-bot">
+            <i class="fa-solid fa-arrow-right-from-bracket">
+                <span>Sair</span>
+            </i>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="header-content">
+            <h1>Produtos</h1>
+            <button class="new-product"><i class="fa-solid fa-plus"></i>Novo Produto</button>
+        </div>
+        <div class="modal">
+            <div class="modal-title">
+                <h2>Cadastre um novo produto</h2>
+                <h3>Coloque todas as informações</h3>
+            </div>
+            <form class="add-prod" method="post">
+                <div class="input-group">
+                    <label>Código do Produto:</label>
+                    <input type="text" name="sku" required placeholder="Código do Produto" maxlength="6" minlength="6">
+                </div>
+                <div class="input-group">
+                    <label>Nome:</label>
+                    <input required placeholder="Nome do Produto" name="nome" type="text">
+                </div>
+                <div class="input-group">
+                    <label>Tipo:</label>
+                    <select id="" name="tipo" required placeholder="Tipo do Produto">
+                        <option value="Tenis">Tenis</option>
+                        <option value="Camisa">Camisa</option>
+                        <option value="Calças">Calças</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Quantidade:</label>
+                    <input type="text" name="qtd" required placeholder="Quantidade">
+                </div>
+                <div class="input-group" required placeholder="Preço de Venda">
+                    <label>Preço de Venda:</label>
+                    <input type="text" name="preco-venda" required placeholder="Preço de Venda">
+                </div>
+                <div class="input-group">
+                    <label>Preço de Compra:</label>
+                    <input type="text" name="preco-compra" required placeholder="Preço de Compra">
+                </div>
+                <div class="btns-content">
+                    <button class="cancel">Cancelar</button>
+                    <input type="submit" value="Salvar">
+                </div>
+            </form>
+        </div>
+        </div>
+        <div class="modal-edit">
+            <div class="modal-title">
+                <h2>Editar Produto</h2>
+                <h3>Coloque todas as informações</h3>
+            </div>
+            <form class="edit-prod" method="post">
+                <div class="input-group">
+                    <label>Id:</label>
+                    <input type="text" name="id" required disabled>
+                </div>
+                <div class="input-group">
+                    <label>Código do Produto:</label>
+                    <input type="text" name="sku" required placeholder="Código do Produto" minlength="6" maxlength="6">
+                </div>
+                <div class="input-group">
+                    <label>Nome:</label>
+                    <input required placeholder="Nome do Produto" name="nome" type="text">
+                </div>
+                <div class="input-group">
+                    <label>Tipo:</label>
+                    <select id="" name="tipo" required placeholder="Tipo do Produto">
+                        <option value="Tenis">Tenis</option>
+                        <option value="Camisa">Camisa</option>
+                        <option value="Calças">Calças</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Quantidade:</label>
+                    <input type="text" name="qtd" required placeholder="Quantidade">
+                </div>
+                <div class="input-group">
+                    <label>Preço de Compra:</label>
+                    <input type="text" name="preco-compra" required placeholder="Preço de Compra">
+                </div>
+                <div class="input-group" required placeholder="Preço de Venda">
+                    <label>Preço de Venda:</label>
+                    <input type="text" name="preco-venda" required placeholder="Preço de Venda">
+                </div>
+                <div class="btns-content">
+                    <button class="cancel">Cancelar</button>
+                    <input type="submit" value="Salvar">
+                </div>
+            </form>
+        </div>
+
+        <div class="popup">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2 class="msg">Produto Cadastrado com sucesso</h2>
+        </div>
+        <div class="popup-erro">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <h2 class="msg-erro"></h2>
+        </div>
+
+        <div class="tabela">
+            <h1 class="sem-prod"></h1>
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Código do Produto</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Preço Compra</th>
+                        <th>Preço Venda</th>
+                        <th class="acoes">Ações</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../JS/produtos.js"></script>
+</body>
+
+</html>
