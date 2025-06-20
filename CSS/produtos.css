@@ -360,7 +360,8 @@ td i {
     }
 }
 
-input[name = 'id']{
+input[name = 'id'],
+.sku-move{
     cursor: not-allowed;
     background-color: #cccccc;
     border: 1px solid var(--rich-black);

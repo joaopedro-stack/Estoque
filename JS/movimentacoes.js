@@ -50,6 +50,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const body = document.querySelector('body');
     const cancel = document.querySelector('.cancel')
 
+    fetch('../Back/listar_produtos.php' , {
+        method: 'GET' ,
+        headers:{
+            'Authorization': `Bearer ${token}`
+        }
+    })
+        .then(res => res.json())
+        .then(prods => {
+            const selectProds = document.querySelector('.produtos');
+            const listaProds = prods.Produtos;
+            listaProds.forEach(l => {
+                const option = document.createElement('option');
+                option.innerHTML = `${l.nome}`
+                selectProds.appendChild(option);
+
+            })
+        })
 
     sair.addEventListener('click', function () {
         localStorage.clear();

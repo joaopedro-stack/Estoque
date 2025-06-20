@@ -53,15 +53,19 @@
             <form class="add-move" method="post">
                 <div class="input-group">
                     <label>Código do Produto:</label>
-                    <input type="text" name="sku" required placeholder="Código do Produto" maxlength="6" minlength="6">
+                    <input type="text" name="id" required placeholder="Código do Produto" maxlength="6" minlength="6" disabled>
                 </div>
                 <div class="input-group">
                     <label>Nome:</label>
-                    <input required placeholder="Nome do Produto" name="nome" type="text">
+                    <select required placeholder="Nome do Produto" class="produtos" name="nome">
+                        <option value="" disabled selected hidden>Nome do Produto</option>
+
+                    </select>
                 </div>
                 <div class="input-group">
                     <label>Tipo:</label>
                     <select id="" name="tipo" required placeholder="Tipo do Produto">
+                        <option value="" disabled selected hidden>Tipo de Movimentação</option>
                         <option value="entrada">Entrada</option>
                         <option value="saida">Saída</option>
                     </select>
@@ -85,7 +89,7 @@
             <form class="edit-move" method="post">
                 <div class="input-group">
                     <label>Código do Produto:</label>
-                    <input type="text" name="sku" required placeholder="Código do Produto" maxlength="6" minlength="6">
+                    <input type="text" name="sku" required placeholder="Código do Produto" maxlength="6" minlength="6" disabled>
                 </div>
                 <div class="input-group">
                     <label>Nome:</label>
